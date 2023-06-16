@@ -35,13 +35,13 @@ Follow these steps to create and run the Java project:
    mkdir src
    ```
 
-6. Now, you can start creating packages and classes within the `src` directory. For example, let's say you want to create a package named `com.mycompany` with a class named `HelloWorld`. Create the package directory structure using the following command:
+6. Now, you can start creating packages and classes within the `src` directory. For example, let's say you want to create a package named `com.jni` with a class named `HelloWorldJNI`. Create the package directory structure using the following command:
 
    ```bash
    mkdir -p src/com/jni
    ```
 
-7. Use a text editor or an IDE to create the Java file within the appropriate package directory. For example, you can use the `nano` text editor to create the `HelloWorldJNI.java` file:
+7. Use a text editor or an IDE to create the Java file within the appropriate package directory. For example, you can use the `vim` text editor to create the `HelloWorldJNI.java` file:
 
    ```bash
    vim src/com/jni/HelloWorldJNI.java
