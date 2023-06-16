@@ -55,7 +55,7 @@ Follow these steps to create and run the Java project:
    cd src
    ```
 
-9. Compile the Java file using the `javac` command. Since the `HelloWorld` class is inside the `com.mycompany` package, use the package-qualified class name:
+9. Compile the Java file using the `javac` command. Since the `HelloWorld` class is inside the `com.jni` package, use the package-qualified class name:
 
    ```bash
    javac com/jni/HelloWorldJNI.java
@@ -75,7 +75,7 @@ Follow these steps to create and run the Java project:
     java -cp src com.jni.HelloWorldJNI
     ```
 
-    The `-cp` option specifies the classpath, which tells Java where to find the compiled `.class` files. In this case, we specify the `src` directory as the classpath and provide the package-qualified name of the main class (`com.mycompany.HelloWorld` in this example).
+    The `-cp` option specifies the classpath, which tells Java where to find the compiled `.class` files. In this case, we specify the `src` directory as the classpath and provide the package-qualified name of the main class (`com.jni.HelloWorldJNI` in this example).
 
 That's it! You have successfully created a Java project with packages and classes in Linux. You can continue adding more packages, classes, and files to your project as needed.
 
