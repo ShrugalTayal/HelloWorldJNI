@@ -22,8 +22,8 @@ public class HelloWorldJNI {
         // Create an instance of HelloWorldJNI and invoke startProbe method
         new HelloWorldJNI().startProbe();
 
-        // Create another instance of HelloWorldJNI and invoke startProbe method
-        new HelloWorldJNI().startProbe();
+        // Create an instance of HelloWorldJNI and invoke stopProbe method
+        new HelloWorldJNI().stopProbe();
 
         // Create another instance of HelloWorldJNI and invoke addToCollection method
         new HelloWorldJNI().addToCollection();
