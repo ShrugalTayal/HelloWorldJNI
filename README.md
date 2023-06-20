@@ -1,13 +1,8 @@
 # HelloWorldJNI
 
-```markdown
-# Java Project with Packages and Classes
-
-This project demonstrates how to create a Java project with packages and classes in Linux.
-
 ## Getting Started
 
-Follow these steps to create and run the Java project:
+Follow these steps to create and run the Java-JNI project in linux:
 
 1. Open a terminal.
 
@@ -66,11 +61,13 @@ Follow these steps to create and run the Java project:
    ```bash
    gcc -shared -o libHelloWorldJNI.so HelloWorldJNI.c -I $JAVA_HOME/include  -I $JAVA_HOME/include/linux
    ```
+   
 10. Copy the compiled `libHelloWorldJNI.so` to the path `/usr/java/packages/lib/`:
 
    ```bash
    sudo cp libHelloWorldJNI.so /usr/java/packages/lib/
    ```
+
 11. Once you have written your Java code, you can compile and run it. First, navigate to the `src` directory:
 
    ```bash
@@ -91,19 +88,14 @@ Follow these steps to create and run the Java project:
     cd ..
     ```
 
-    Run the Java program using the `java` command, providing the package-qualified class name:
+    Run the Java program using the `java` command, providing the class name:
 
     ```bash
-    java -cp src com.jni.HelloWorldJNI
+    java HelloWorldJNI
     ```
 
-    The `-cp` option specifies the classpath, which tells Java where to find the compiled `.class` files. In this case, we specify the `src` directory as the classpath and provide the package-qualified name of the main class (`com.jni.HelloWorldJNI` in this example).
-
-That's it! You have successfully created a Java project with packages and classes in Linux. You can continue adding more packages, classes, and files to your project as needed.
+That's it! You have successfully created a Java-JNI project in Linux.
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-```
-
-Feel free to customize and enhance the content of the `README.md` file based on your specific project requirements.
