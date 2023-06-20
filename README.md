@@ -49,13 +49,35 @@ Follow these steps to create and run the Java project:
 
    This will open the `HelloWorldJNI.java` file in the `vim` editor. You can then write your Java code in the file and save it.
 
-8. Once you have written your Java code, you can compile and run it. First, navigate to the `src` directory:
+8. After writing `HelloWorldJNI.java` file create a header file from the java file by running the command:
+
+    ```bash
+   javac -h . HelloWorldJNI.java
+   ```
+
+9. Use `vim` text editor to create the `HelloWorldJNI.c` file. In this file include `jni.h` and `HelloWorldJNI.h` as header files.
+
+   ```bash
+   vim src/com/jni/HelloWorldJNI.java
+   ```
+
+   Compile the C file using the `gcc` command:
+
+   ```bash
+   gcc -shared -o libHelloWorldJNI.so HelloWorldJNI.c -I $JAVA_HOME/include  -I $JAVA_HOME/include/linux
+   ```
+10. Copy the compiled `libHelloWorldJNI.so` to the path `/usr/java/packages/lib/`:
+
+   ```bash
+   sudo cp libHelloWorldJNI.so /usr/java/packages/lib/
+   ```
+11. Once you have written your Java code, you can compile and run it. First, navigate to the `src` directory:
 
    ```bash
    cd src
    ```
 
-9. Compile the Java file using the `javac` command. Since the `HelloWorld` class is inside the `com.jni` package, use the package-qualified class name:
+12. Compile the Java file using the `javac` command. Since the `HelloWorld` class is inside the `com.jni` package, use the package-qualified class name:
 
    ```bash
    javac com/jni/HelloWorldJNI.java
@@ -63,7 +85,7 @@ Follow these steps to create and run the Java project:
 
    This will generate the compiled `.class` file in the same directory.
 
-10. Now, you can run the compiled Java program. Go back to the project directory:
+13. Now, you can run the compiled Java program. Go back to the project directory:
 
     ```bash
     cd ..
